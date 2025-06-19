@@ -254,6 +254,10 @@ nav li {
   flex-direction: column;
 }
 
+.footer-content a {
+  text-decoration: none;
+  color:#fff;
+}
 
 @media (max-width: 768px) {
   header {
