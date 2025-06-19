@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #ffff;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  background-color: #fff;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+header img {
+  max-height: 120px; /* Aumentar el tamaño del logo */
+  height: auto; /* Mantener proporción */
+  width: 100px; /* Mantener proporción */
+}
+
+nav {
+  margin-right: auto; /* empuja a la derecha */
+  flex-grow: 1;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav li {
+  margin-right: 20px;
+  font-size: 20px;
+  white-space: nowrap;
+
+}
+
+.boton-acceso {
+  display: flex;
+  gap: 10px;
+}
+
+.boton-acceso a {
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* BOTONES */
+.btn {
+  padding: 10px 5px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+  color: #ff893b;
+  border: 2px solid #ff893b;
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: #ff893b;
+  color: white;
+}
+
+.btn-login {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-registro {
+  background-color: #ff893b;
+  color: #fff;
+}
+
+/* HOME */
+.home {
+  background-image: url(./img/home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 100%;
+  height: 600px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffffd5;
+}
+
+.home h2 {
+  font-size: 80px;
+  width: 60%;
+  padding: 80px 0 0 0;
+ 
+}
+
+.home p {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+
+
+/* SEARCH BAR */
+.search-bar {
+  margin-top: 20px;
+  position: relative;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px 40px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  max-width: 100%;
+}
+
+.search-bar button {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: url('./img/lupa.png') no-repeat center center;
+  background-size: 20px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* MAPA */
+.mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px; /* Reducir padding si es necesario */
+  height: 500px; /* Aumentar la altura */
+}
+
+.mapa iframe {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  width: 100%; /* Ajustar al ancho del contenedor */
+  max-width: 800px; /* Aumentar el ancho máximo */
+  height: 100%; /* Ajustar al alto del contenedor */
+  max-height: 500px; /* Aumentar el alto máximo */
+}
+
+.categorias h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.categorias p {
+    text-align: left;
+    margin-left: 22px;
+}
+
+.cat-pop {
+    display: flex;
+    background-color: #ffff;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
+    padding: 20px;
+    row-gap: 20px;
+}
+
+.cat1 {
+    background-image: url(./img/restaurantes.jpg);
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.cat2 {
+    background-image: url(./img/bares.avif);
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cat3 {
+    background-image: url(./img/boliches.jpg);
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.localsfe {
+  text-align: center;
+}
+
+.boton-nego {
+  padding: 20px;
+}
+
+/* Estilos para el botón del menú */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.footer-content img {
+  flex-direction: 1;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  header img {
+    max-height: 120px; /* Reducir el tamaño del logo en móviles */
+  }
+
+.home {
+ 
+  background-size: 1350px;
+}
+  .home h2 {
+    font-size: 40px;
+  }
+
+  .menu-toggle {
+    display: block; /* Mostrar el botón del menú */
+    margin-left: auto;
+  }
+
+  .menu {
+    display: none; /* Ocultar el menú por defecto */
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+
+  .menu.active {
+    display: flex; /* Mostrar el menú cuando esté activo */
+  }
+
+  .menu ul {
+    flex-direction: column; /* Apilar los enlaces */
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 20px;
+  }
+
+  .boton-acceso {
+    flex-direction: column; /* Apilar los botones */
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .boton-acceso a {
+    width: 100%; /* Asegurar que los botones ocupen todo el ancho */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+    max-height: 120px; /* Reducir aún más el tamaño del logo en pantallas pequeñas */
+  }
+
+  .home {
+  background-size: 1350px;
+}
+  .home h2 {
+     font-size: 40px;
+  }
+
+  .mapa iframe {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  width: 320px; /* Ajustar al ancho del contenedor */
+  /* Aumentar el ancho máximo */
+  height: 100%; /* Ajustar al alto del contenedor */
+  max-height: 500px; /* Aumentar el alto máximo */
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
